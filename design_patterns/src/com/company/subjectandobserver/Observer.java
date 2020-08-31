@@ -6,5 +6,5 @@ package com.company.subjectandobserver;
  * @Description:观察者
  */
 public interface Observer {
-    public void update();
+    public void update(float temp, float humidity, float pressure);
 }

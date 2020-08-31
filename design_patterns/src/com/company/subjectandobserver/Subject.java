@@ -7,8 +7,8 @@ package com.company.subjectandobserver;
  */
 public interface Subject {
     //观察者管理
-    public void registerObserver();
-    public void removeObserver();
+    public void registerObserver(Observer o);
+    public void removeObserver(Observer o);
 
     //通知观察者
     public void notifyObserver();
