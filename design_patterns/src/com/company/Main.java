@@ -3,6 +3,9 @@ package com.company;
 import com.company.decorator.Beverage;
 import com.company.decorator.MyBeverage;
 import com.company.decorator.MyCondiment;
+import com.company.factory.pizza.Pizza;
+import com.company.factory.pizza.PizzaStore;
+import com.company.factory.simplefactory.SimpleFactory;
 import com.company.strategy.Duck;
 import com.company.strategy.impl.MallardDuck;
 import com.company.subjectandobserver.impl.CurrentConditionsDisplay;
@@ -35,7 +38,11 @@ public class Main {
 //        beverage = new MyCondiment(beverage);
 //        System.out.println(beverage.getDescription() + " " + beverage.cost());
 
-
-
+//简单工厂
+        SimpleFactory simpleFactory = new SimpleFactory();
+        PizzaStore pizzaStore = new PizzaStore(simpleFactory);
+        pizzaStore.orderPizza("myFristPizza");
     }
+
+
 }
